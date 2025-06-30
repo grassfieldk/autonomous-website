@@ -11,6 +11,7 @@ type(scope): Description
 ```
 
 ### Types
+
 - **feat**: A new feature
 - **fix**: A bug fix
 - **docs**: Documentation only changes
@@ -21,9 +22,11 @@ type(scope): Description
 - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 ### Scope
+
 The scope should be the name of the module or feature being worked on (e.g., `auth`, `ui`, `api`).
 
 ### Description
+
 The description should be a short, imperative summary of the change (e.g., "Add login functionality").
 
 ## Examples
