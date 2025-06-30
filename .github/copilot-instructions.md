@@ -13,15 +13,24 @@
 
 3. **Commit Messages**
    - Write clear and concise commit messages in English.
-   - Follow the format: `type(scope): description` (e.g., `feat(auth): add login functionality`).
+   - Follow the format: `type(scope): Description` (e.g., `feat(auth): Add login functionality`).
+   - Use the imperative mood in the description (e.g., "Fix" instead of "Fixed" or "Fixes").
+   - Ensure the description starts with a capital letter.
 
-## UI Text
+4. **Pre-commit Checks**
+   - All commits must pass ESLint checks and Prettier formatting.
+   - Use the pre-commit hook to ensure compliance before committing.
 
-- All text visible in the UI must be in Japanese.
+5. **Development Environment**
+   - Use Visual Studio Code with the recommended extensions (`dbaeumer.vscode-eslint`, `esbenp.prettier-vscode`).
+   - Enable `formatOnSave` in VS Code settings.
 
-## Major Changes
+6. **Major Changes**
+   - Before making significant changes, summarize the intended modifications and seek approval.
 
-- Before making significant changes, summarize the intended modifications and seek approval.
+7. **Autonomous Workflow**
+   - All tasks, including coding, documentation, and commits, must be performed by Copilot.
+   - Manual edits by the user are not allowed and should be avoided.
 
 ---
 
