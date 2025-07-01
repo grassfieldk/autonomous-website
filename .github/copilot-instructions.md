@@ -6,6 +6,7 @@
    - Non-UI elements (e.g., documentation, comments, log outputs, commit messages) should be written in **English** unless otherwise specified.
    - UI elements (e.g., screen display text) must be written in **Japanese**.
    - When communicating in Japanese, use word spacing for English words within Japanese text for better readability.
+   - When using punctuation marks (colon ":", semicolon ";", etc.) in Japanese text, add a single half-width space after the mark.
 
 2. **Comments**
    - Keep comments minimal and focused on explaining the functionality or logic of the code.
