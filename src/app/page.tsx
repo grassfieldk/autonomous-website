@@ -1,83 +1,94 @@
-import Image from "next/image";
+import { Alert, LinkButton, ExternalLinkButton } from "@/components";
+import { FeatureCard } from "@/components/FeatureCard";
+import { TechBadgeList, TechBadgeItem } from "@/components/TechBadgeList";
 
+/**
+ * Feature data for the homepage
+ */
+const features = [
+  {
+    title: "自動化された開発",
+    description: "GitHub Copilot による自律的なコーディング",
+    content:
+      "Visual Studio Code と GitHub Copilot（Agent モード）を使用して、コーディングからドキュメンテーション、コミットまで AI が自動で実行します。",
+  },
+  {
+    title: "モダンな技術スタック",
+    description: "Next.js と TypeScript による堅牢な基盤",
+    content:
+      "Next.js 15、TypeScript、Tailwind CSS を使用した最新の Web 開発環境を構築しています。",
+  },
+  {
+    title: "品質管理",
+    description: "ESLint と Prettier による自動品質チェック",
+    content:
+      "Pre-commit hook により、すべてのコミットで自動的にコード品質チェックとフォーマットが実行されます。",
+  },
+];
+
+/**
+ * Technology stack data
+ */
+const technologies: TechBadgeItem[] = [
+  { name: "Next.js", variant: "primary" },
+  { name: "TypeScript", variant: "primary" },
+  { name: "Tailwind CSS", variant: "primary" },
+  { name: "GitHub Copilot", variant: "secondary" },
+  { name: "ESLint", variant: "secondary" },
+  { name: "Prettier", variant: "secondary" },
+];
+
+/**
+ * Home Page Component
+ *
+ * Demonstrates the usage of common styles defined in globals.css
+ * without requiring extensive class declarations.
+ */
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-        </ol>
+    <div className="container py-12">
+      <main className="text-center">
+        <h1>Autonomous Website</h1>
+        <p className="text-muted-foreground mb-8 text-xl">
+          AI が制作から運用までのほとんどすべてを担当する自律型ウェブサイト
+        </p>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              content={feature.content}
             />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          ))}
+        </div>
+
+        <div className="mb-8 space-y-4">
+          <h2>今後の予定機能</h2>
+          <div className="mx-auto max-w-2xl text-left">
+            <Alert variant="info">
+              <strong>AI トレンド ニュース:</strong>
+              Gemini CLI に近1ヶ月の AI 関連ニュースをリサーチさせ、 要約した Markdown
+              ファイルを記事としてサイト上で閲覧できる機能を開発予定です。
+            </Alert>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <LinkButton href="/style-guide">スタイル ガイドを見る</LinkButton>
+          <ExternalLinkButton
+            href="https://github.com/grassfield/autonomous-website"
+            variant="outline"
           >
-            Read our docs
-          </a>
+            GitHub で見る
+          </ExternalLinkButton>
+        </div>
+
+        <div className="mt-12 border-t pt-8">
+          <TechBadgeList technologies={technologies} />
         </div>
       </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

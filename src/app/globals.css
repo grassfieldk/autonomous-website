@@ -3,11 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0070f3;
+  --primary-hover: #0056b3;
+  --border: #e5e7eb;
+  --border-hover: #d1d5db;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --destructive: #ef4444;
+  --destructive-hover: #dc2626;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-hover: var(--destructive-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,11 +32,281 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #0ea5e9;
+    --primary-hover: #0284c7;
+    --border: #374151;
+    --border-hover: #4b5563;
+    --muted: #1f2937;
+    --muted-foreground: #9ca3af;
+    --destructive: #f87171;
+    --destructive-hover: #ef4444;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
+  line-height: 1.6;
+}
+
+/* Typography */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground font-semibold;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply mb-6 text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply mb-5 text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply mb-4 text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply mb-3 text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply mb-2 text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply mb-2 text-base md:text-lg;
+  }
+
+  p {
+    @apply text-foreground mb-4;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-hover transition-colors duration-200;
+  }
+
+  code {
+    @apply bg-muted text-foreground rounded px-2 py-1 font-mono text-sm;
+  }
+
+  pre {
+    @apply bg-muted text-foreground overflow-x-auto rounded-lg p-4 font-mono text-sm;
+  }
+
+  blockquote {
+    @apply border-primary text-muted-foreground border-l-4 pl-4 italic;
+  }
+
+  hr {
+    @apply border-border my-8;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    @apply mb-4 pl-6;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply mb-1;
+  }
+}
+
+/* Form Elements */
+@layer base {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  select {
+    @apply border-border bg-background text-foreground placeholder-muted-foreground w-full rounded-md border px-3 py-2;
+    @apply focus:ring-primary focus:border-transparent focus:ring-2 focus:outline-none;
+    @apply transition-colors duration-200;
+  }
+
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="password"]:hover,
+  input[type="url"]:hover,
+  input[type="tel"]:hover,
+  input[type="number"]:hover,
+  input[type="search"]:hover,
+  textarea:hover,
+  select:hover {
+    @apply border-border-hover;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply text-primary bg-background border-border h-4 w-4 rounded;
+    @apply focus:ring-primary focus:ring-2 focus:ring-offset-2;
+  }
+
+  label {
+    @apply text-foreground mb-1 block text-sm font-medium;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-error {
+    @apply text-destructive mt-1 text-sm;
+  }
+
+  .form-help {
+    @apply text-muted-foreground mt-1 text-sm;
+  }
+}
+
+/* Button Styles */
+@layer base {
+  button,
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 font-medium;
+    @apply transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none;
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover focus:ring-primary text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-muted text-foreground hover:bg-border focus:ring-border;
+  }
+
+  .btn-destructive {
+    @apply bg-destructive hover:bg-destructive-hover focus:ring-destructive text-white;
+  }
+
+  .btn-outline {
+    @apply border-border text-foreground hover:bg-muted focus:ring-border;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-muted focus:ring-border;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+}
+
+/* Layout Components */
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-background border-border rounded-lg border p-6 shadow-sm;
+  }
+
+  .card-header {
+    @apply border-border mb-4 border-b pb-4;
+  }
+
+  .card-title {
+    @apply text-foreground m-0 text-xl font-semibold;
+  }
+
+  .card-description {
+    @apply text-muted-foreground mt-1 text-sm;
+  }
+
+  .card-content {
+    @apply text-foreground;
+  }
+
+  .card-footer {
+    @apply border-border mt-4 border-t pt-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary text-white;
+  }
+
+  .badge-secondary {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .badge-destructive {
+    @apply bg-destructive text-white;
+  }
+
+  .alert {
+    @apply mb-4 rounded-md border p-4;
+  }
+
+  .alert-info {
+    @apply border-primary bg-primary/10 text-primary;
+  }
+
+  .alert-success {
+    @apply border-green-500 bg-green-50 text-green-800;
+  }
+
+  .alert-warning {
+    @apply border-yellow-500 bg-yellow-50 text-yellow-800;
+  }
+
+  .alert-error {
+    @apply border-destructive bg-destructive/10 text-destructive;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }
