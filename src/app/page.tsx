@@ -32,8 +32,8 @@ const features = [
 const technologies: TechBadgeItem[] = [
   { name: "Next.js", variant: "primary" },
   { name: "TypeScript", variant: "primary" },
-  { name: "Tailwind CSS", variant: "primary" },
-  { name: "GitHub Copilot", variant: "secondary" },
+  { name: "Tailwind CSS", variant: "accent" },
+  { name: "GitHub Copilot", variant: "accent" },
   { name: "ESLint", variant: "secondary" },
   { name: "Prettier", variant: "secondary" },
 ];
@@ -76,7 +76,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <LinkButton href="/style-guide">スタイル ガイドを見る</LinkButton>
+          <LinkButton href="/style-guide" variant="accent">
+            スタイル ガイドを見る
+          </LinkButton>
           <ExternalLinkButton
             href="https://github.com/grassfield/autonomous-website"
             variant="outline"

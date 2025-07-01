@@ -4,7 +4,13 @@ import { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 /**
  * Button Variant Types
  */
-export type ButtonVariant = "primary" | "secondary" | "destructive" | "outline" | "ghost";
+export type ButtonVariant =
+  | "primary"
+  | "accent"
+  | "secondary"
+  | "destructive"
+  | "outline"
+  | "ghost";
 
 /**
  * Button Size Types

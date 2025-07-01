@@ -2,15 +2,22 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #0070f3;
-  --primary-hover: #0056b3;
+  --foreground: #333333;
+  --primary: #00bfbf;
+  --primary-hover: #009999;
+  --primary-light: #33cccc;
+  --primary-dark: #007a7a;
+  --accent: #e3007f;
+  --accent-hover: #b30060;
+  --accent-light: #e64da6;
+  --accent-dark: #9a0054;
   --border: #e5e7eb;
   --border-hover: #d1d5db;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
   --destructive: #ef4444;
   --destructive-hover: #dc2626;
+  --gray: #333436;
 }
 
 @theme inline {
@@ -18,28 +25,42 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
   --color-border: var(--border);
   --color-border-hover: var(--border-hover);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-hover: var(--destructive-hover);
+  --color-gray: var(--gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f0f0f;
     --foreground: #ededed;
-    --primary: #0ea5e9;
-    --primary-hover: #0284c7;
-    --border: #374151;
-    --border-hover: #4b5563;
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
+    --primary: #26d0ce;
+    --primary-hover: #22b5b3;
+    --primary-light: #4dd8d6;
+    --primary-dark: #1a9b99;
+    --accent: #f02d8b;
+    --accent-hover: #d91a7a;
+    --accent-light: #f356a0;
+    --accent-dark: #c0166b;
+    --border: #333436;
+    --border-hover: #4a4b4e;
+    --muted: #1a1a1a;
+    --muted-foreground: #a1a1aa;
     --destructive: #f87171;
     --destructive-hover: #ef4444;
+    --gray: #333436;
   }
 }
 
@@ -196,6 +217,10 @@ body {
     @apply bg-primary hover:bg-primary-hover focus:ring-primary text-white;
   }
 
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-hover focus:ring-accent text-white;
+  }
+
   .btn-secondary {
     @apply bg-muted text-foreground hover:bg-border focus:ring-border;
   }
@@ -257,6 +282,10 @@ body {
 
   .badge-primary {
     @apply bg-primary text-white;
+  }
+
+  .badge-accent {
+    @apply bg-accent text-white;
   }
 
   .badge-secondary {

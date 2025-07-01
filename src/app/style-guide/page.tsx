@@ -71,6 +71,7 @@ function greeting(name: string) {
         <div className="space-y-4">
           <div className="flex flex-wrap gap-4">
             <Button variant="primary">プライマリ ボタン</Button>
+            <Button variant="accent">アクセント ボタン</Button>
             <Button variant="secondary">セカンダリ ボタン</Button>
             <Button variant="destructive">削除ボタン</Button>
             <Button variant="outline">アウトライン ボタン</Button>
@@ -192,8 +193,63 @@ function greeting(name: string) {
         <h2>バッジ</h2>
         <div className="flex flex-wrap gap-2">
           <Badge variant="primary">プライマリ</Badge>
+          <Badge variant="accent">アクセント</Badge>
           <Badge variant="secondary">セカンダリ</Badge>
           <Badge variant="destructive">重要</Badge>
+        </div>
+      </section>
+
+      {/* Color Palette Section */}
+      <section className="mb-12">
+        <h2>カラーパレット</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="mb-4">メインカラー</h3>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center">
+                <div className="bg-primary mb-2 h-20 w-full rounded-lg"></div>
+                <p className="text-sm font-medium">Primary</p>
+                <p className="text-muted-foreground text-xs">#00bfbf</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-accent mb-2 h-20 w-full rounded-lg"></div>
+                <p className="text-sm font-medium">Accent</p>
+                <p className="text-muted-foreground text-xs">#e3007f</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-foreground mb-2 h-20 w-full rounded-lg"></div>
+                <p className="text-sm font-medium">Text</p>
+                <p className="text-muted-foreground text-xs">#333333</p>
+              </div>
+              <div className="text-center">
+                <div className="mb-2 h-20 w-full rounded-lg bg-[#333436]"></div>
+                <p className="text-sm font-medium">Gray</p>
+                <p className="text-muted-foreground text-xs">#333436</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-4">システムカラー</h3>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center">
+                <div className="bg-muted mb-2 h-20 w-full rounded-lg border"></div>
+                <p className="text-sm font-medium">Muted</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-destructive mb-2 h-20 w-full rounded-lg"></div>
+                <p className="text-sm font-medium">Destructive</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-background mb-2 h-20 w-full rounded-lg border-2"></div>
+                <p className="text-sm font-medium">Background</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-border mb-2 h-20 w-full rounded-lg"></div>
+                <p className="text-sm font-medium">Border</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

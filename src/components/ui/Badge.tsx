@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 /**
  * Badge Variant Types
  */
-export type BadgeVariant = "primary" | "secondary" | "destructive";
+export type BadgeVariant = "primary" | "accent" | "secondary" | "destructive";
 
 /**
  * Badge Component Props
