@@ -27,7 +27,7 @@
 5. **Development Environment**
    - Use Visual Studio Code with the recommended extensions (`dbaeumer.vscode-eslint`, `esbenp.prettier-vscode`, `github.copilot`).
    - Enable `formatOnSave` in VS Code settings.
-   - Follow the comprehensive setup guide in `docs/development.md`.
+   - Follow the setup guide in `docs/development.md`.
 
 6. **Code Quality & Testing**
    - Write tests for all new components and functions following `docs/testing.md`.
@@ -50,7 +50,7 @@
 9. **Major Changes**
    - Before making significant changes, summarize the intended modifications and seek approval.
    - Follow migration procedures outlined in `docs/migration.md` for framework updates.
-   - Create comprehensive test coverage for major features.
+   - Create proper test coverage for major features.
 
 10. **Autonomous Workflow**
     - All tasks, including coding, documentation, and commits, must be performed by Copilot.
@@ -62,7 +62,7 @@
 
 - **Components**: Place reusable UI components in `src/components/ui/`
 - **Pages**: Use Next.js App Router structure in `src/app/`
-- **Documentation**: Maintain comprehensive docs in `docs/` directory
+- **Documentation**: Maintain docs in `docs/` directory
 - **Testing**: Follow testing patterns in `src/__tests__/` and `tests/`
 - **Configuration**: Keep all config files in project root with TypeScript when possible
 
@@ -74,6 +74,178 @@
 4. **Performance Optimization**: Use AI insights for continuous performance improvement
 5. **Maintainable Architecture**: Design for long-term AI-assisted maintenance
 
----
+## Writing Style Guidelines
 
-These rules ensure consistency, quality, and maintainability in our AI-first development process. Please adhere to them strictly and reference the comprehensive documentation in the `docs/` directory for detailed guidance.
+### Writing Principles
+
+- **Clarity over Complexity**: Use clear, direct language instead of elaborate expressions
+- **Conciseness over Verbosity**: Eliminate redundant phrases and unnecessary words
+- **Specificity over Abstraction**: Provide concrete information rather than vague descriptions
+- **Active Voice Preference**: Use active voice to make statements more direct and engaging
+- **Consistency**: Maintain consistent terminology and expressions throughout documentation
+
+### Avoid AI-Generated Hype Expressions
+
+#### 1. Excessive Absoluteness/Completeness Claims
+
+**Avoid:**
+
+- "Revolutionary technology that changes the industry"
+- "Ultimate performance solution"
+- "Complete problem resolution"
+- "World's first/best/most advanced"
+- "Game-changing innovation"
+- "Guaranteed to solve all issues"
+
+**Use instead:**
+
+- "Effective technology that improves industry practices"
+- "High-performance solution"
+- "Addresses key problems"
+- "New/innovative approach"
+- "Significant improvement"
+- "Helps resolve many issues"
+
+#### 2. Abstract/Sensational Effect Language
+
+**Avoid:**
+
+- "Works like magic"
+- "Miraculous results"
+- "Unleash the potential"
+- "Supercharge your workflow"
+- "Democratize AI"
+- "Transform your business overnight"
+
+**Use instead:**
+
+- "Works efficiently"
+- "Delivers good results"
+- "Maximize potential"
+- "Improve your workflow"
+- "Make AI more accessible"
+- "Improve your business operations"
+
+#### 3. Authority/Predictive Claims
+
+**Avoid:**
+
+- "Will redefine the industry"
+- "The future of technology"
+- "Inevitable paradigm shift"
+- "Next-generation solution"
+- "Industry standard of tomorrow"
+
+**Use instead:**
+
+- "May influence industry practices"
+- "Modern technology approach"
+- "Significant change in approach"
+- "Current solution"
+- "Emerging industry practice"
+
+### Technical Writing Best Practices
+
+#### 1. Eliminate Redundancy
+
+**Avoid:**
+
+- "First, let's start by..." → "First, let's..." or "Let's start by..."
+- "In order to accomplish this task" → "To accomplish this task"
+- "It is possible to configure" → "You can configure"
+- "Has the ability to process" → "Can process"
+
+#### 2. Use Active Voice
+
+**Prefer:**
+
+- "The system processes data" over "Data is processed by the system"
+- "You can configure settings" over "Settings can be configured"
+- "This guide explains" over "This guide is designed to explain"
+
+#### 3. Be Specific and Concrete
+
+**Avoid vague terms:**
+
+- "High performance" → "Response time under 100ms"
+- "Scalable solution" → "Handles up to 10,000 concurrent users"
+- "Easy to use" → "Requires 3 steps to set up"
+- "Fast processing" → "Processes 1,000 items per second"
+
+#### 4. Consistent Terminology
+
+- Use the same term for the same concept throughout documentation
+- Create and maintain a glossary for project-specific terms
+- Avoid synonyms when referring to technical concepts
+
+### List Formatting Guidelines
+
+#### Avoid Mechanical Emphasis Patterns
+
+**Don't use:**
+
+- **Bold:** for every list item start
+- Excessive emoji decoration (🚀, ✅, 🔥, 💡, ⭐, 🎯)
+- **Important:** or **Note:** labels repeatedly
+
+**Use instead:**
+
+- Clear, descriptive list items without artificial emphasis
+- Consistent bullet point structure
+- Context-appropriate formatting only when necessary
+
+#### Example - Better List Formatting
+
+**Instead of:**
+
+```
+- ✅ **Complete**: Full implementation
+- 🚀 **Fast**: High-speed processing
+- 💡 **Smart**: AI-powered features
+```
+
+**Use:**
+
+```
+- Full implementation with proper features
+- High-speed processing with optimized algorithms
+- AI-powered features for intelligent automation
+```
+
+### Documentation Structure Guidelines
+
+#### 1. Organize Information Logically
+
+- Start with overview, then details
+- Group related information together
+- Use clear headings and subheadings
+- Provide navigation aids for long documents
+
+#### 2. Write Scannable Content
+
+- Use bullet points for lists
+- Keep paragraphs short (3-4 sentences max)
+- Use code examples to illustrate concepts
+- Include practical usage examples
+
+#### 3. Maintain Professional Tone
+
+- Be helpful but not overly enthusiastic
+- Focus on facts rather than marketing language
+- Acknowledge limitations when they exist
+- Provide realistic expectations
+
+### Quality Checklist for Writing
+
+Before finalizing any documentation:
+
+- [ ] Remove redundant phrases and words
+- [ ] Convert passive voice to active where appropriate
+- [ ] Replace vague terms with specific, measurable descriptions
+- [ ] Ensure consistent terminology throughout
+- [ ] Eliminate excessive emphasis or promotional language
+- [ ] Verify all claims are accurate and realistic
+- [ ] Check that examples are practical and tested
+- [ ] Confirm the structure supports easy scanning and navigation
+
+---

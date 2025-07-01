@@ -1,22 +1,22 @@
 # Component Guide
 
-Complete reference for all components in the Autonomous Website project.
+Reference for all components in the Autonomous Website project.
 
-## 🎯 Overview
+## Overview
 
-This project follows a component-driven architecture with a comprehensive design system. All components are built with TypeScript for type safety and use Tailwind CSS for styling.
+This project follows a component-driven architecture with a design system. All components are built with TypeScript for type safety and use Tailwind CSS for styling.
 
-## 📚 Component Categories
+## Component Categories
 
-### 🔧 Base UI Components (`src/components/ui/`)
+### Base UI Components (`src/components/ui/`)
 
 These are the foundational building blocks used throughout the application.
 
 ---
 
-## 🔲 Button
+## Button
 
-Versatile button component with multiple variants and sizes.
+Button component with multiple variants and sizes.
 
 ### Import
 
@@ -143,7 +143,7 @@ interface CardFooterProps {
 
 ---
 
-## 🏷️ Badge
+## Badge
 
 Small status indicators and labels.
 
@@ -177,7 +177,7 @@ interface BadgeProps {
 
 ---
 
-## ⚠️ Alert
+## Alert
 
 Contextual feedback messages.
 
@@ -332,7 +332,7 @@ Components use CSS custom properties defined in `globals.css`:
 
 ---
 
-## 🔧 Component Development Best Practices
+## Component Development Best Practices
 
 ### 1. TypeScript First
 
@@ -510,7 +510,7 @@ export const Primary: StoryObj<typeof Button> = {
 
 ---
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 ### Bundle Size
 
@@ -538,4 +538,4 @@ export const ExpensiveComponent = React.memo(function ExpensiveComponent({
 });
 ```
 
-This component guide provides comprehensive documentation for building and using components in the Autonomous Website project, ensuring consistency and maintainability across the codebase.
+This component guide provides documentation for building and using components in the Autonomous Website project, ensuring consistency and maintainability across the codebase.

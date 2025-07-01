@@ -1,12 +1,12 @@
 # Commit Guidelines
 
-Comprehensive guide for maintaining clean, meaningful commit history in the Autonomous Website project.
+Guide for maintaining clean, meaningful commit history in the Autonomous Website project.
 
-## 🎯 Overview
+## Overview
 
 This project follows [Conventional Commits](https://www.conventionalcommits.org/) specification to maintain a clean, automated, and meaningful commit history. Well-structured commits enable automated changelog generation, version bumping, and clear project history.
 
-## 📝 Commit Message Format
+## Commit Message Format
 
 Each commit message consists of a **header**, **body**, and **footer**:
 
@@ -34,27 +34,27 @@ fix(auth): Resolve token validation issue
 docs(readme): Update installation instructions
 style(format): Apply Prettier formatting to components
 refactor(api): Simplify data fetching logic
-test(ui): Add comprehensive Button component tests
+test(ui): Add Button component tests
 chore(deps): Update Next.js to version 15.3.4
 ```
 
-## 🏷️ Commit Types
+## Commit Types
 
-| Type         | Usage               | Description                                               |
-| ------------ | ------------------- | --------------------------------------------------------- |
-| **feat**     | ✨ New Feature      | Introduces a new feature to the codebase                  |
-| **fix**      | 🐛 Bug Fix          | Fixes a bug or issue                                      |
-| **docs**     | 📝 Documentation    | Documentation only changes                                |
-| **style**    | 💄 Code Style       | Changes that don't affect code meaning (formatting, etc.) |
-| **refactor** | ♻️ Code Refactoring | Code changes that neither fix bugs nor add features       |
-| **perf**     | ⚡ Performance      | Code changes that improve performance                     |
-| **test**     | ✅ Testing          | Adding missing tests or correcting existing tests         |
-| **build**    | 🔧 Build System     | Changes affecting build system or dependencies            |
-| **ci**       | 👷 CI/CD            | Changes to CI configuration files and scripts             |
-| **chore**    | 🔨 Maintenance      | Other changes that don't modify src or test files         |
-| **revert**   | ⏪ Revert           | Reverts a previous commit                                 |
+| Type         | Usage            | Description                                               |
+| ------------ | ---------------- | --------------------------------------------------------- |
+| **feat**     | New Feature      | Introduces a new feature to the codebase                  |
+| **fix**      | Bug Fix          | Fixes a bug or issue                                      |
+| **docs**     | Documentation    | Documentation only changes                                |
+| **style**    | Code Style       | Changes that don't affect code meaning (formatting, etc.) |
+| **refactor** | Code Refactoring | Code changes that neither fix bugs nor add features       |
+| **perf**     | Performance      | Code changes that improve performance                     |
+| **test**     | Testing          | Adding missing tests or correcting existing tests         |
+| **build**    | Build System     | Changes affecting build system or dependencies            |
+| **ci**       | CI/CD            | Changes to CI configuration files and scripts             |
+| **chore**    | Maintenance      | Other changes that don't modify src or test files         |
+| **revert**   | Revert           | Reverts a previous commit                                 |
 
-## 🎯 Scope Guidelines
+## Scope Guidelines
 
 The scope specifies the area of the codebase affected by the change:
 
@@ -79,7 +79,7 @@ The scope specifies the area of the codebase affected by the change:
 - Use **existing scopes** when possible
 - Omit scope if change affects multiple areas
 
-## ✍️ Description Guidelines
+## Description Guidelines
 
 The description provides a concise summary of the change:
 
@@ -130,7 +130,7 @@ The body provides additional context and motivation for the change:
 ### Example with Body
 
 ```
-feat(ui): Add comprehensive Button component system
+feat(ui): Add Button component system
 
 Implement a flexible Button component with multiple variants,
 sizes, and states to replace inconsistent button usage across
@@ -183,7 +183,7 @@ Co-authored-by: AI Assistant <ai@example.com>
 Co-authored-by: Developer <dev@example.com>
 ```
 
-## 🚀 Practical Examples
+## Practical Examples
 
 ### Feature Addition
 
@@ -221,7 +221,7 @@ Fixes #78
 ### Documentation Update
 
 ```
-docs(readme): Add comprehensive installation guide
+docs(readme): Add installation guide
 
 - Add prerequisite requirements (Node.js, npm versions)
 - Include step-by-step installation instructions
@@ -262,7 +262,7 @@ Benchmark results:
 - Largest Contentful Paint: 3.2s → 1.9s
 ```
 
-## 🔧 Tools and Automation
+## Tools and Automation
 
 ### Git Hooks
 
@@ -352,7 +352,7 @@ Well-structured commits enable automated changelog generation:
 
 ### Documentation
 
-- **readme**: Add comprehensive installation guide
+- **readme**: Add installation guide
 - **components**: Update component usage examples
 
 ### Performance
@@ -360,7 +360,7 @@ Well-structured commits enable automated changelog generation:
 - **ui**: Optimize image loading performance
 ```
 
-## 🎯 Best Practices Summary
+## Best Practices Summary
 
 ### Do ✅
 
