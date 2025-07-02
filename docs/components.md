@@ -538,4 +538,83 @@ export const ExpensiveComponent = React.memo(function ExpensiveComponent({
 });
 ```
 
+---
+
+## Navigation Components
+
+### NavBar
+
+Main navigation bar component with site branding, navigation links, and theme toggle.
+
+#### Import
+
+```typescript
+import { NavBar } from "@/components";
+```
+
+#### Features
+
+- **Fixed positioning** at the top of the page
+- **Glass effect** with backdrop blur and transparency
+- **Accent color border** at the bottom for visual distinction
+- **Responsive design** with container layout
+- **Theme-aware styling** that adapts to light/dark modes
+
+#### Usage
+
+```tsx
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <NavBar />
+      <main>{children}</main>
+    </>
+  );
+}
+```
+
+### ThemeToggle
+
+Theme switching component that allows users to toggle between light and dark modes.
+
+#### Import
+
+```typescript
+import { ThemeToggle } from "@/components";
+```
+
+#### Features
+
+- **Manual theme switching** with light/dark mode toggle
+- **System preference detection** on first load
+- **localStorage persistence** across browser sessions
+- **Cross-tab synchronization** using storage events
+- **Smooth transitions** with CSS-based theme changes
+- **Accessible** with proper ARIA labels and tooltips
+
+#### Implementation Details
+
+The theme system uses CSS custom properties and `data-theme` attributes:
+
+```css
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  /* ... other light theme colors */
+}
+
+:root[data-theme="dark"] {
+  --background: #333436;
+  --foreground: #f3f4f6;
+  /* ... other dark theme colors */
+}
+```
+
+#### Usage
+
+```tsx
+// Already included in NavBar, but can be used independently
+<ThemeToggle />
+```
+
 This component guide provides documentation for building and using components in the Autonomous Website project, ensuring consistency and maintainability across the codebase.

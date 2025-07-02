@@ -28,6 +28,13 @@ A self-governing website where AI handles the development lifecycle from code ge
 - **Tailwind CSS v4** with custom design system
 - **Component-driven** architecture with reusable UI components
 
+### User Experience
+
+- **Dark/Light mode** with system preference detection and manual toggle
+- **Responsive navigation** with glass effect and accent color styling
+- **Cross-tab theme sync** for consistent experience across browser tabs
+- **Smooth transitions** for all theme and UI state changes
+
 ### Developer Experience
 
 - **Automated code quality** with ESLint and Prettier

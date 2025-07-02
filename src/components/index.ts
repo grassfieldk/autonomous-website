@@ -7,3 +7,5 @@
 export * from "./ui";
 export * from "./FeatureCard";
 export * from "./TechBadgeList";
+export * from "./NavBar";
+export * from "./ThemeToggle";

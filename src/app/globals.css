@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #333333;
+  --nav-background: #f8fafc;
   --primary: #00bfbf;
   --primary-hover: #009999;
   --primary-light: #33cccc;
@@ -18,11 +19,15 @@
   --destructive: #ef4444;
   --destructive-hover: #dc2626;
   --gray: #333436;
+
+  /* Theme transition duration */
+  --theme-transition: all 0.3s ease-in-out;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nav-background: var(--nav-background);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-light: var(--primary-light);
@@ -43,9 +48,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #333436;
     --foreground: #f3f4f6;
+    --nav-background: #3f4247;
     --primary: #26d0ce;
     --primary-hover: #22b5b3;
     --primary-light: #4dd8d6;
@@ -64,6 +70,48 @@
   }
 }
 
+:root[data-theme="dark"] {
+  --background: #333436;
+  --foreground: #f3f4f6;
+  --nav-background: #3f4247;
+  --primary: #26d0ce;
+  --primary-hover: #22b5b3;
+  --primary-light: #4dd8d6;
+  --primary-dark: #1a9b99;
+  --accent: #f02d8b;
+  --accent-hover: #d91a7a;
+  --accent-light: #f356a0;
+  --accent-dark: #c0166b;
+  --border: #4a4d52;
+  --border-hover: #5a5d62;
+  --muted: #3f4247;
+  --muted-foreground: #9ca3af;
+  --destructive: #f87171;
+  --destructive-hover: #ef4444;
+  --gray: #6b7280;
+}
+
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #333333;
+  --nav-background: #f8fafc;
+  --primary: #00bfbf;
+  --primary-hover: #009999;
+  --primary-light: #33cccc;
+  --primary-dark: #007a7a;
+  --accent: #e3007f;
+  --accent-hover: #b30060;
+  --accent-light: #e64da6;
+  --accent-dark: #9a0054;
+  --border: #e5e7eb;
+  --border-hover: #d1d5db;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --destructive: #ef4444;
+  --destructive-hover: #dc2626;
+  --gray: #333436;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -72,10 +120,23 @@ body {
     "rlig" 1,
     "calt" 1;
   line-height: 1.6;
+  padding-top: 4rem; /* 64px to account for fixed navbar */
+  transition: var(--theme-transition);
 }
 
 /* Typography */
 @layer base {
+  /* Apply theme transition to all elements for smooth theme switching */
+  *,
+  *::before,
+  *::after {
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out,
+      border-color 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
+
   h1,
   h2,
   h3,
