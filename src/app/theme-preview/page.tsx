@@ -9,22 +9,19 @@ import {
 } from "@/components";
 
 /**
- * Style Guide Page
+ * Theme Preview Page
  *
- * This page demonstrates the usage of common styles and components
- * defined in globals.css. It serves as a reference for developers
- * and designers to see all available styling options.
+ * Demonstrates all theme colors and components for visual verification
+ * across light and dark themes in the AI coding environment.
  */
 
-export default function StyleGuidePage() {
+export default function ThemePreviewPage() {
   return (
     <div className="container py-8">
-      <h1>スタイルガイド</h1>
-      <p>
-        このページでは、サイト全体で使用可能な共通スタイルとコンポーネントを紹介します。
-      </p>
+      <h1>テーマプレビュー</h1>
+      <p>ライトテーマとダークテーマでの全コンポーネントの表示確認用ページです。</p>
 
-      {/* Typography Section */}
+      {/* Typography */}
       <section className="mb-12">
         <h2>タイポグラフィ</h2>
         <div className="space-y-4">
@@ -38,76 +35,70 @@ export default function StyleGuidePage() {
           </div>
 
           <p>
-            これは通常の段落テキストです。<a href="#">リンクテキスト</a>も含まれています。
-            <code>インラインコード</code>も使用できます。
+            通常のテキスト段落です。<a href="#">リンクテキスト</a>や
+            <code>インラインコード</code>も含まれます。
           </p>
 
-          <blockquote>
-            これは引用文です。重要な情報や他の情報源からの引用に使用します。
-          </blockquote>
+          <blockquote>引用文のサンプルです。</blockquote>
 
-          <pre>{`// コードブロックの例
-function greeting(name: string) {
-  return \`こんにちは、\${name}さん！\`;
+          <pre>{`// コードブロック
+function sample() {
+  return "Hello World";
 }`}</pre>
 
           <ul>
-            <li>箇条書きリスト項目1</li>
-            <li>箇条書きリスト項目2</li>
-            <li>箇条書きリスト項目3</li>
+            <li>リスト項目1</li>
+            <li>リスト項目2</li>
+            <li>リスト項目3</li>
           </ul>
 
           <ol>
-            <li>番号付きリスト項目1</li>
-            <li>番号付きリスト項目2</li>
-            <li>番号付きリスト項目3</li>
+            <li>番号付きリスト1</li>
+            <li>番号付きリスト2</li>
+            <li>番号付きリスト3</li>
           </ol>
         </div>
       </section>
 
-      {/* Buttons Section */}
+      {/* Buttons */}
       <section className="mb-12">
         <h2>ボタン</h2>
         <div className="space-y-4">
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary">プライマリボタン</Button>
-            <Button variant="accent">アクセントボタン</Button>
-            <Button variant="secondary">セカンダリボタン</Button>
-            <Button variant="destructive">削除ボタン</Button>
-            <Button variant="outline">アウトラインボタン</Button>
-            <Button variant="ghost">ゴーストボタン</Button>
+            <Button variant="primary">プライマリ</Button>
+            <Button variant="accent">アクセント</Button>
+            <Button variant="secondary">セカンダリ</Button>
+            <Button variant="destructive">削除</Button>
+            <Button variant="outline">アウトライン</Button>
+            <Button variant="ghost">ゴースト</Button>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <Button variant="primary" size="sm">
-              小さいボタン
+              小
             </Button>
-            <Button variant="primary">標準ボタン</Button>
+            <Button variant="primary">標準</Button>
             <Button variant="primary" size="lg">
-              大きいボタン
+              大
             </Button>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <Button variant="primary" disabled>
-              無効化ボタン
+              無効化
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Form Elements Section */}
+      {/* Form Elements */}
       <section className="mb-12">
         <h2>フォーム要素</h2>
         <div className="max-w-md space-y-4">
           <div className="form-group">
             <label htmlFor="text-input">テキスト入力</label>
-            <input
-              type="text"
-              id="text-input"
-              placeholder="ここにテキストを入力してください"
-            />
-            <div className="form-help">これはヘルプテキストです。</div>
+            <input type="text" id="text-input" placeholder="テキストを入力" />
+            <div className="form-help">ヘルプテキスト</div>
           </div>
 
           <div className="form-group">
@@ -117,17 +108,13 @@ function greeting(name: string) {
 
           <div className="form-group">
             <label htmlFor="password-input">パスワード</label>
-            <input type="password" id="password-input" placeholder="パスワードを入力" />
-            <div className="form-error">パスワードは8文字以上である必要があります。</div>
+            <input type="password" id="password-input" placeholder="パスワード" />
+            <div className="form-error">エラーメッセージ</div>
           </div>
 
           <div className="form-group">
             <label htmlFor="textarea">テキストエリア</label>
-            <textarea
-              id="textarea"
-              rows={4}
-              placeholder="長いテキストを入力してください"
-            ></textarea>
+            <textarea id="textarea" rows={4} placeholder="長いテキスト"></textarea>
           </div>
 
           <div className="form-group">
@@ -136,7 +123,6 @@ function greeting(name: string) {
               <option value="">選択してください</option>
               <option value="option1">オプション1</option>
               <option value="option2">オプション2</option>
-              <option value="option3">オプション3</option>
             </select>
           </div>
 
@@ -163,14 +149,14 @@ function greeting(name: string) {
         </div>
       </section>
 
-      {/* Cards Section */}
+      {/* Cards */}
       <section className="mb-12">
         <h2>カード</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <Card>
-            <CardHeader title="基本カード" description="これはカードの説明文です。" />
+            <CardHeader title="基本カード" description="カードの説明文" />
             <CardContent>
-              <p>カードのメインコンテンツがここに表示されます。</p>
+              <p>カードのメインコンテンツです。</p>
             </CardContent>
             <CardFooter>
               <Button variant="primary" size="sm">
@@ -182,13 +168,13 @@ function greeting(name: string) {
           <Card>
             <CardContent>
               <h3 className="card-title">シンプルカード</h3>
-              <p>ヘッダーやフッターのないシンプルなカードです。</p>
+              <p>ヘッダーとフッターのないカードです。</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Badges Section */}
+      {/* Badges */}
       <section className="mb-12">
         <h2>バッジ</h2>
         <div className="flex flex-wrap gap-2">
@@ -199,7 +185,7 @@ function greeting(name: string) {
         </div>
       </section>
 
-      {/* Color Palette Section */}
+      {/* Color Palette */}
       <section className="mb-12">
         <h2>カラーパレット</h2>
         <div className="space-y-6">
@@ -222,7 +208,7 @@ function greeting(name: string) {
                 <p className="text-muted-foreground text-xs">#333333</p>
               </div>
               <div className="text-center">
-                <div className="mb-2 h-20 w-full rounded-lg bg-[#333436]"></div>
+                <div className="bg-brand-gray mb-2 h-20 w-full rounded-lg"></div>
                 <p className="text-sm font-medium">Gray</p>
                 <p className="text-muted-foreground text-xs">#333436</p>
               </div>
@@ -253,37 +239,15 @@ function greeting(name: string) {
         </div>
       </section>
 
-      {/* Alerts Section */}
+      {/* Alerts */}
       <section className="mb-12">
         <h2>アラート</h2>
         <div className="space-y-4">
-          <Alert variant="info">
-            <strong>情報:</strong> これは情報アラートです。
-          </Alert>
-          <Alert variant="success">
-            <strong>成功:</strong> 操作が正常に完了しました。
-          </Alert>
-          <Alert variant="warning">
-            <strong>警告:</strong> 注意が必要な項目があります。
-          </Alert>
-          <Alert variant="error">
-            <strong>エラー:</strong> 問題が発生しました。
-          </Alert>
+          <Alert variant="info">情報アラートのサンプルです。</Alert>
+          <Alert variant="success">成功アラートのサンプルです。</Alert>
+          <Alert variant="warning">警告アラートのサンプルです。</Alert>
+          <Alert variant="error">エラーアラートのサンプルです。</Alert>
         </div>
-      </section>
-
-      <hr />
-
-      <section className="mt-8">
-        <h2>使用方法</h2>
-        <p>
-          これらのスタイルは <code>globals.css</code> で定義されており、 各ページで追加の
-          CSS クラスを記述することなく使用できます。
-        </p>
-        <p>
-          新しいコンポーネントを作成する際は、まずこれらの基本スタイルを活用し、
-          必要に応じてカスタムスタイルを追加してください。
-        </p>
       </section>
     </div>
   );

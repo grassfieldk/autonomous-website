@@ -8,7 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
  */
 export function NavBar() {
   return (
-    <nav className="bg-nav-background/80 border-accent fixed top-0 z-50 w-full border-b-2 backdrop-blur-[2px]">
+    <nav className="bg-nav-background/80 border-nav-border fixed top-0 z-50 w-full border-b-4 backdrop-blur-[2px]">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-6">
           <Link
@@ -27,10 +27,10 @@ export function NavBar() {
             ホーム
           </Link>
           <Link
-            href="/style-guide"
+            href="/theme-preview"
             className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
           >
-            スタイルガイド
+            テーマプレビュー
           </Link>
           <a
             href="https://github.com/grassfieldk/autonomous-website"

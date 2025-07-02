@@ -13,6 +13,7 @@ export default {
         background: "var(--color-background)",
         foreground: "var(--color-foreground)",
         "nav-background": "var(--color-nav-background)",
+        "nav-border": "var(--color-nav-border)",
         primary: {
           DEFAULT: "var(--color-primary)",
           hover: "var(--color-primary-hover)",
@@ -36,6 +37,12 @@ export default {
         destructive: {
           DEFAULT: "var(--color-destructive)",
           hover: "var(--color-destructive-hover)",
+        },
+        success: {
+          DEFAULT: "var(--success)",
+        },
+        warning: {
+          DEFAULT: "var(--warning)",
         },
         // Extended color palette based on specified colors
         brand: {

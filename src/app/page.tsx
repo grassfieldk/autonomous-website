@@ -76,8 +76,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <LinkButton href="/style-guide" variant="accent">
-            スタイルガイドを見る
+          <LinkButton href="/theme-preview" variant="accent">
+            テーマプレビューを見る
           </LinkButton>
           <ExternalLinkButton
             href="https://github.com/grassfieldk/autonomous-website"
