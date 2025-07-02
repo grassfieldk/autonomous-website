@@ -67,7 +67,7 @@ AI が開発ライフサイクルを担当する自律型ウェブサイト
 1. **リポジトリをクローン**
 
    ```bash
-   git clone https://github.com/your-username/autonomous-website.git
+   git clone https://github.com/grassfieldk/autonomous-website.git
    cd autonomous-website
    ```
 
@@ -168,23 +168,20 @@ Tailwind CSS をベースとした包括的なデザインシステムを実装:
 - [ ] **デプロイ自動化**
 - [ ] **アナリティクス統合**
 
-## 貢献
+## 開発アプローチ
 
-このプロジェクトは主に AI によって開発されていますが、貢献を歓迎します！詳細については[貢献ガイドライン](./docs/CONTRIBUTING.md)をお読みください。
+このプロジェクトは AI ファースト開発ワークフローを実証しています：
 
-### 開発ワークフロー
-
-1. すべてのコードは GitHub Copilot Agent モードで生成
-2. 変更は pre-commit フックで自動検証
-3. ドキュメントは自動生成・更新
-4. コミットは conventional commit 標準に従う
+1. **コード生成**: GitHub Copilot がほとんどの開発タスクを処理
+2. **品質管理**: pre-commit フックによる自動検証
+3. **ドキュメンテーション**: AI 生成・保守されるドキュメント
+4. **標準**: Conventional commit と TypeScript の強制
 
 ## ドキュメント
 
 - **[開発ガイド](./docs/development.md)** - 詳細な開発手順
 - **[コンポーネントガイド](./docs/components.md)** - コンポーネント使用法と API リファレンス
 - **[デプロイガイド](./docs/deployment.md)** - プロダクションデプロイ手順
-- **[貢献方法](./docs/CONTRIBUTING.md)** - プロジェクト貢献方法
 
 ## ライセンス
 

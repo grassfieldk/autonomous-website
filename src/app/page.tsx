@@ -80,7 +80,7 @@ export default function Home() {
             スタイル ガイドを見る
           </LinkButton>
           <ExternalLinkButton
-            href="https://github.com/grassfield/autonomous-website"
+            href="https://github.com/grassfieldk/autonomous-website"
             variant="outline"
           >
             GitHub で見る

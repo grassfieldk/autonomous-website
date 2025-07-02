@@ -169,7 +169,7 @@ services:
   - name: web
     source_dir: /
     github:
-      repo: your-username/autonomous-website
+      repo: grassfieldk/autonomous-website
       branch: main
     run_command: npm start
     environment_slug: node-js

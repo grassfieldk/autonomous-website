@@ -2,6 +2,14 @@
   "name": "autonomous-website",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grassfieldk/autonomous-website.git"
+  },
+  "homepage": "https://github.com/grassfieldk/autonomous-website#readme",
+  "bugs": {
+    "url": "https://github.com/grassfieldk/autonomous-website/issues"
+  },
   "scripts": {
     "dev": "next dev --turbopack --hostname 0.0.0.0",
     "build": "next build",

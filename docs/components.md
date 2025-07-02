@@ -71,7 +71,7 @@ interface ButtonProps {
 
 // External link button
 <ExternalLinkButton
-  href="https://github.com/example"
+  href="https://github.com/grassfieldk/autonomous-website"
   variant="ghost"
 >
   View on GitHub

@@ -67,7 +67,7 @@ A self-governing website where AI handles the development lifecycle from code ge
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/autonomous-website.git
+   git clone https://github.com/grassfieldk/autonomous-website.git
    cd autonomous-website
    ```
 
@@ -144,55 +144,44 @@ All components follow atomic design principles and are fully typed with TypeScri
 
 ## Roadmap
 
-### Phase 1: Foundation (Complete)
+### **Phase 1: Foundation** (Complete)
 
-- [x] Next.js + TypeScript setup with modern tooling
-- [x] Component system and design system implementation
-- [x] Documentation framework and style guidelines
+- [x] Modern technology stack setup
+- [x] Component system implementation
+- [x] Documentation framework
 
-### Phase 2: Core Development (In Progress)
+### **Phase 2: AI Integration** (In Progress)
 
-- [ ] Testing infrastructure setup (Vitest, Playwright)
-- [ ] Complete project structure and development tools
-- [ ] Enhanced component library with Storybook
+- [ ] **AI Trend News System**
+  - Automated news collection using Gemini CLI
+  - Intelligent summarization and categorization
+  - Dynamic content generation and publishing
+- [ ] **Content Management System**
+  - AI-driven article creation
+  - Automatic SEO optimization
+  - Smart content scheduling
 
-### Phase 3: AI Features (Planned)
+### **Phase 3: Advanced Features** (Planned)
 
-- [ ] AI-powered news aggregation system
-- [ ] Automated content generation and management
-- [ ] Dynamic website updates based on trends
+- [ ] **Multi-language support**
+- [ ] **Performance optimization**
+- [ ] **Deployment automation**
+- [ ] **Analytics integration**
 
-### Phase 4: Production Ready (Future)
+## Development Approach
 
-- [ ] Performance optimization and monitoring
-- [ ] Multi-language support and analytics
-- [ ] Advanced deployment automation
+This project demonstrates AI-first development workflows:
 
-## Current Status
-
-| Area            | Status          | Notes                                        |
-| --------------- | --------------- | -------------------------------------------- |
-| **Foundation**  | Complete        | Tech stack, components, documentation        |
-| **Testing**     | Not implemented | Need to implement test infrastructure        |
-| **AI Features** | Planned         | Core functionality for autonomous operations |
-
-## Contributing
-
-This project is developed using AI-assisted workflows. Contributions are welcome! Please read our [Contributing Guidelines](./docs/CONTRIBUTING.md) for details.
-
-### Development Workflow
-
-1. Code is generated using GitHub Copilot Agent mode
-2. Changes are validated with pre-commit hooks
-3. Documentation is generated and updated automatically
-4. Commits follow conventional commit standards
+1. **Code Generation**: GitHub Copilot handles most development tasks
+2. **Quality Control**: Automated validation with pre-commit hooks
+3. **Documentation**: AI-generated and maintained documentation
+4. **Standards**: Conventional commits and TypeScript enforcement
 
 ## Documentation
 
 - **[Development Guide](./docs/development.md)** - Development instructions
 - **[Component Guide](./docs/components.md)** - Component usage and API reference
 - **[Deployment Guide](./docs/deployment.md)** - Production deployment instructions
-- **[Contributing](./docs/CONTRIBUTING.md)** - How to contribute to the project
 
 ## License
 
