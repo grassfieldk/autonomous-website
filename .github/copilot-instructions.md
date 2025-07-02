@@ -7,6 +7,14 @@
    - UI elements (e.g., screen display text) must be written in **Japanese**.
    - When communicating in Japanese, use word spacing for English words within Japanese text for better readability.
    - When using punctuation marks (colon ":", semicolon ";", etc.) in Japanese text, add a single half-width space after the mark.
+   - **Japanese Text Guidelines**:
+     - **No word spacing (分かち書き)**: Do not use spaces within Japanese sentences or between katakana words
+     - **English-Japanese spacing**: Always use spaces between English (alphabet) and full-width Japanese characters
+     - **Compound katakana terms**: Write as single words without spaces (e.g., "ユーティリティファースト" not "ユーティリティ ファースト", "ビルドツール" not "ビルド ツール", "フォーマット" not "フォーマッティング")
+     - **Technical terms**: Keep development-specific terms in English when they are well-established (e.g., "Git Hooks", "API", "CLI")
+     - **Common katakana**: Use katakana for widely adopted terms (e.g., "コンポーネント", "フレームワーク", "ライブラリ", "サーバー", "データベース", "コードレビュー", "テスト")
+     - **Brand names**: Keep original form (e.g., "GitHub", "TypeScript", "Next.js")
+     - **Avoid excessive katakana conversion**: Don't convert terms that are better left in English
 
 2. **Comments**
    - Keep comments minimal and focused on explaining the functionality or logic of the code.
@@ -186,7 +194,7 @@
 **Don't use:**
 
 - **Bold:** for every list item start
-- Excessive emoji decoration (🚀, ✅, 🔥, 💡, ⭐, 🎯)
+- Emoji decoration for emphasis or status indication
 - **Important:** or **Note:** labels repeatedly
 
 **Use instead:**
@@ -200,9 +208,9 @@
 **Instead of:**
 
 ```
-- ✅ **Complete**: Full implementation
-- 🚀 **Fast**: High-speed processing
-- 💡 **Smart**: AI-powered features
+- ✓ Complete: Full implementation
+- → Fast: High-speed processing
+- * Smart: AI-powered features
 ```
 
 **Use:**
@@ -236,6 +244,36 @@
 - Acknowledge limitations when they exist
 - Provide realistic expectations
 
+#### 4. Use Neutral Technical Language
+
+- **Avoid emotional expressions**: No exclamation marks, enthusiastic language, or subjective adjectives
+- **No decorative emoji usage**: Do not use emojis for decoration, emphasis, or status indication in technical documentation. Emojis are acceptable only when they are part of proper nouns, essential identifiers, or established conventions (e.g., common phrases like "built with ❤️")
+- **Objective tone**: Present information without personal opinions or marketing rhetoric
+- **Factual statements**: Focus on what the system does, not how amazing it is
+- **Minimal adjectives**: Use descriptive terms only when technically necessary
+
+**Examples:**
+
+**Instead of:**
+
+```
+- Exciting new features coming soon!
+- Amazing performance improvements
+- Perfect solution for your needs
+```
+
+**Use:**
+
+```
+- New features planned for next release
+- Performance improvements implemented
+- Solution addresses specific requirements
+```
+
+#### 5. Use Text-Based Status Indicators
+
+Use text instead of emojis for status indicators in tables, lists, and status reports.
+
 ### Quality Checklist for Writing
 
 Before finalizing any documentation:
@@ -245,6 +283,8 @@ Before finalizing any documentation:
 - [ ] Replace vague terms with specific, measurable descriptions
 - [ ] Ensure consistent terminology throughout
 - [ ] Eliminate excessive emphasis or promotional language
+- [ ] Remove decorative emoji usage from technical documentation
+- [ ] Use neutral, objective tone without emotional expressions
 - [ ] Verify all claims are accurate and realistic
 - [ ] Check that examples are practical and tested
 - [ ] Confirm the structure supports easy scanning and navigation

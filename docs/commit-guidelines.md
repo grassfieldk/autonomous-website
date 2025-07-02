@@ -94,22 +94,22 @@ The description provides a concise summary of the change:
 ### Good Examples
 
 ```
-✅ add user authentication middleware
-✅ fix responsive layout on mobile devices
-✅ update component prop types for better type safety
-✅ remove deprecated API endpoints
+add user authentication middleware
+fix responsive layout on mobile devices
+update component prop types for better type safety
+remove deprecated API endpoints
 ```
 
 ### Bad Examples
 
 ```
-❌ Added new stuff
-❌ Fix bugs
-❌ Updated things.
-❌ WIP: working on authentication feature
+Added new stuff
+Fix bugs
+Updated things.
+WIP: working on authentication feature
 ```
 
-## 📄 Body Guidelines
+## Body Guidelines
 
 The body provides additional context and motivation for the change:
 
@@ -147,7 +147,7 @@ This change improves UI consistency and reduces code duplication
 while providing a better developer experience.
 ```
 
-## 🦶 Footer Guidelines
+## Footer Guidelines
 
 The footer contains metadata about the commit:
 
@@ -329,7 +329,7 @@ git config --global alias.cm "commit -m"
 git config --global alias.ca "commit --amend"
 ```
 
-## 📊 Changelog Generation
+## Changelog Generation
 
 Well-structured commits enable automated changelog generation:
 
@@ -362,7 +362,7 @@ Well-structured commits enable automated changelog generation:
 
 ## Best Practices Summary
 
-### Do ✅
+### Do
 
 - Use conventional commit format
 - Write clear, descriptive commit messages
@@ -371,7 +371,7 @@ Well-structured commits enable automated changelog generation:
 - Keep commits focused and atomic
 - Use imperative mood in descriptions
 
-### Don't ❌
+### Don't
 
 - Mix multiple unrelated changes in one commit
 - Use vague descriptions like "fix bugs" or "update code"
@@ -380,7 +380,7 @@ Well-structured commits enable automated changelog generation:
 - Use past tense in commit messages
 - Exceed character limits
 
-## 🔍 Commit Review Checklist
+## Commit Review Checklist
 
 Before committing, ensure:
 
@@ -393,7 +393,7 @@ Before committing, ensure:
 - [ ] Code is properly tested and linted
 - [ ] No sensitive information is included
 
-## 📞 Getting Help
+## Getting Help
 
 If you need help with commit guidelines:
 

@@ -120,7 +120,7 @@ import fs from "fs/promises";
 import path from "path";
 
 async function migrateNextJS() {
-  console.log("🚀 Starting Next.js 15 migration...");
+  console.log("Starting Next.js 15 migration...");
 
   // 1. Update package.json
   const packageJsonPath = path.join(process.cwd(), "package.json");
@@ -149,7 +149,7 @@ async function migrateNextJS() {
 
   await fs.writeFile(configPath, config);
 
-  console.log("✅ Next.js migration completed");
+  console.log("Next.js migration completed");
 }
 
 migrateNextJS().catch(console.error);
@@ -232,7 +232,7 @@ export function ErrorBoundary({ error, reset }: { error: Error; reset: () => voi
 }
 ```
 
-## 🎨 Styling Migration
+## Styling Migration
 
 ### Tailwind CSS v3 to v4 Migration
 
@@ -284,7 +284,7 @@ import fs from "fs/promises";
 import path from "path";
 
 async function migrateTailwind() {
-  console.log("🎨 Starting Tailwind CSS v4 migration...");
+  console.log("Starting Tailwind CSS v4 migration...");
 
   // 1. Update dependencies
   const packageJsonPath = path.join(process.cwd(), "package.json");
@@ -313,7 +313,7 @@ async function migrateTailwind() {
     await fs.unlink(oldConfigPath);
   }
 
-  console.log("✅ Tailwind CSS migration completed");
+  console.log("Tailwind CSS migration completed");
 }
 
 function convertTailwindConfig(jsConfig: string): string {
@@ -374,7 +374,7 @@ updates:
 #!/bin/bash
 # scripts/audit-dependencies.sh
 
-echo "🔍 Auditing dependencies..."
+echo "Auditing dependencies..."
 
 # Check for outdated packages
 npm outdated
@@ -388,7 +388,7 @@ npx npm-check-duplicates
 # Analyze bundle size
 npx webpack-bundle-analyzer build/static/js/*.js
 
-echo "✅ Dependency audit completed"
+echo "Dependency audit completed"
 ```
 
 ### Breaking Changes Handler
@@ -433,7 +433,7 @@ async function handleBreakingChanges() {
       packageJson.devDependencies[change.package];
 
     if (currentVersion && shouldMigrate(currentVersion, change.version)) {
-      console.log(`⚠️  Breaking change detected: ${change.description}`);
+      console.log(`Breaking change detected: ${change.description}`);
       await change.migration();
     }
   }
@@ -536,7 +536,7 @@ FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 # scripts/migrate-dev-env.sh
 #!/bin/bash
 
-echo "🔧 Migrating development environment..."
+echo "Migrating development environment..."
 
 # Update Node.js version
 nvm install 18.17.0
@@ -563,7 +563,7 @@ cat > .vscode/settings.json << EOF
 }
 EOF
 
-echo "✅ Development environment migration completed"
+echo "Development environment migration completed"
 ```
 
 ### Production Environment Migration
@@ -613,7 +613,7 @@ ENV HOSTNAME "0.0.0.0"
 CMD ["node", "server.js"]
 ```
 
-## 🧪 Testing Migration
+## Testing Migration
 
 ### Test Suite Updates
 
@@ -759,9 +759,9 @@ jobs:
             - Updated configuration files
 
             ### Testing
-            - ✅ All tests pass
-            - ✅ Build successful
-            - ✅ Migration validation complete
+            - All tests pass
+            - Build successful
+            - Migration validation complete
           branch: migration/automated-${{ github.run_number }}
 ```
 

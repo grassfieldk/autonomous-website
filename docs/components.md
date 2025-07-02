@@ -80,7 +80,7 @@ interface ButtonProps {
 
 ---
 
-## 🃏 Card
+## Card
 
 Flexible card component for content organization.
 
@@ -218,9 +218,9 @@ interface AlertProps {
 
 ---
 
-## 🎨 Feature Components (`src/components/`)
+## Feature Components (`src/components/`)
 
-### 🌟 FeatureCard
+### FeatureCard
 
 Specialized card for showcasing features on the homepage.
 
@@ -251,7 +251,7 @@ interface FeatureCardProps {
 />
 ```
 
-### 🏆 TechBadgeList
+### TechBadgeList
 
 Component for displaying lists of technology badges.
 
@@ -289,7 +289,7 @@ const technologies = [
 
 ---
 
-## 🎨 Styling Guidelines
+## Styling Guidelines
 
 ### Component Styling
 
@@ -427,7 +427,7 @@ Ensure components are accessible:
 
 ---
 
-## 📱 Responsive Design
+## Responsive Design
 
 All components are designed to be responsive by default:
 
@@ -456,7 +456,7 @@ All components are designed to be responsive by default:
 
 ---
 
-## 🧪 Testing Components
+## Testing Components
 
 ### Unit Tests
 

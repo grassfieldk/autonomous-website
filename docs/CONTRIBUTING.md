@@ -450,7 +450,7 @@ Button appears unresponsive to touch events.
 - OS: iOS 15.6
 ```
 
-## 🎉 Recognition
+## Recognition
 
 Contributors will be recognized in:
 
@@ -459,7 +459,7 @@ Contributors will be recognized in:
 - Contributor wall
 - Special mentions in documentation
 
-## 📞 Getting Help
+## Getting Help
 
 If you need help with contributing:
 
@@ -468,7 +468,7 @@ If you need help with contributing:
 3. **Create Discussion**: Use GitHub Discussions for questions
 4. **Contact Maintainers**: Reach out to project maintainers
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/). By participating, you agree to uphold this code.
 

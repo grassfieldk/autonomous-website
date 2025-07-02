@@ -110,7 +110,7 @@ This documentation is maintained alongside the codebase and follows the same ver
 - Test all code examples
 - Review for clarity and accuracy
 
-## 📞 Getting Help
+## Getting Help
 
 ### Documentation Issues
 

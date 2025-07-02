@@ -339,7 +339,7 @@ export function VirtualizedList({
 }
 ```
 
-## 🎨 CSS Performance
+## CSS Performance
 
 ### Tailwind CSS Optimization
 
@@ -435,7 +435,7 @@ return (
 );
 ```
 
-## 📦 Bundle Optimization
+## Bundle Optimization
 
 ### Webpack Bundle Analyzer
 
@@ -479,23 +479,23 @@ export default nextConfig;
 
 ```typescript
 // Optimize imports for tree shaking
-// ✅ Good: Named imports
+// Good: Named imports
 import { Button, Card } from "@/components/ui";
 import { format } from "date-fns";
 import { debounce } from "lodash-es";
 
-// ❌ Bad: Default imports of large libraries
+// Bad: Default imports of large libraries
 import * as _ from "lodash";
 import moment from "moment";
 
-// ✅ Use barrel exports strategically
+// Use barrel exports strategically
 // components/ui/index.ts
 export { Button } from "./Button";
 export { Card } from "./Card";
 export { Badge } from "./Badge";
 // Don't export everything with *
 
-// ✅ Use dynamic imports for conditional features
+// Use dynamic imports for conditional features
 const AdminPanel = lazy(() =>
   import("./AdminPanel").then((module) => ({
     default: module.AdminPanel,
@@ -566,7 +566,7 @@ const nextConfig: NextConfig = {
 }
 ```
 
-## 📊 Performance Monitoring
+## Performance Monitoring
 
 ### Core Web Vitals Implementation
 
@@ -724,7 +724,7 @@ module.exports = {
 };
 ```
 
-## 🔍 Performance Debugging
+## Performance Debugging
 
 ### React DevTools Profiler
 

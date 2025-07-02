@@ -105,7 +105,7 @@ src/
    import "./styles.css";
    ```
 
-## 🎨 Design System
+## Design System
 
 ### Color System
 
@@ -245,7 +245,7 @@ docs(readme): Update installation instructions
    - Prefer Tailwind utilities over custom CSS
    - Use CSS custom properties for theming
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 ### Unit Testing
 
@@ -307,7 +307,7 @@ npm run start
    - Implement dynamic imports for heavy components
    - Use React.lazy for route-level splitting
 
-## 🔍 Debugging
+## Debugging
 
 ### Common Issues
 

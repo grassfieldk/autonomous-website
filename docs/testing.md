@@ -54,7 +54,7 @@ tests/
     └── lighthouse.spec.ts # Lighthouse audits
 ```
 
-## 🧪 Unit Testing
+## Unit Testing
 
 ### Component Testing Pattern
 
@@ -108,7 +108,7 @@ export * from "@testing-library/react";
 export { customRender as render };
 ```
 
-## 🔗 Integration Testing
+## Integration Testing
 
 Integration tests verify that components work together correctly:
 
@@ -132,7 +132,7 @@ describe('FeatureSection Integration', () => {
 });
 ```
 
-## 🌐 End-to-End Testing
+## End-to-End Testing
 
 ### Page-Level Testing
 
@@ -301,7 +301,7 @@ test.describe("Performance Tests", () => {
 });
 ```
 
-## ♿ Accessibility Testing
+## Accessibility Testing
 
 ### Automated Accessibility Tests
 
@@ -368,7 +368,7 @@ Use these prompts with GitHub Copilot to generate tests:
    - Performance checks
    ```
 
-## 📊 Test Coverage
+## Test Coverage
 
 ### Coverage Targets
 
@@ -514,14 +514,14 @@ jobs:
 ### 1. Test Naming Convention
 
 ```typescript
-// ✅ Good: Descriptive test names
+// Recommended: Descriptive test names
 describe("Button Component", () => {
   it("renders primary variant with correct styles", () => {});
   it("handles click events when enabled", () => {});
   it("shows loading state during async operations", () => {});
 });
 
-// ❌ Bad: Vague test names
+// Avoid: Vague test names
 describe("Button", () => {
   it("works", () => {});
   it("handles clicks", () => {});
@@ -547,7 +547,7 @@ const mockFeatures = [
 ### 3. Async Testing
 
 ```typescript
-// ✅ Proper async testing
+// Recommended: Proper async testing
 test('loads user data on mount', async () => {
   render(<UserProfile userId="1" />);
 
