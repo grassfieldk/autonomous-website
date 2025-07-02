@@ -19,7 +19,7 @@ import {
 export default function StyleGuidePage() {
   return (
     <div className="container py-8">
-      <h1>スタイル ガイド</h1>
+      <h1>スタイルガイド</h1>
       <p>
         このページでは、サイト全体で使用可能な共通スタイルとコンポーネントを紹介します。
       </p>
@@ -70,12 +70,12 @@ function greeting(name: string) {
         <h2>ボタン</h2>
         <div className="space-y-4">
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary">プライマリ ボタン</Button>
-            <Button variant="accent">アクセント ボタン</Button>
-            <Button variant="secondary">セカンダリ ボタン</Button>
+            <Button variant="primary">プライマリボタン</Button>
+            <Button variant="accent">アクセントボタン</Button>
+            <Button variant="secondary">セカンダリボタン</Button>
             <Button variant="destructive">削除ボタン</Button>
-            <Button variant="outline">アウトライン ボタン</Button>
-            <Button variant="ghost">ゴースト ボタン</Button>
+            <Button variant="outline">アウトラインボタン</Button>
+            <Button variant="ghost">ゴーストボタン</Button>
           </div>
 
           <div className="flex flex-wrap gap-4">
@@ -111,7 +111,7 @@ function greeting(name: string) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="email-input">メール アドレス</label>
+            <label htmlFor="email-input">メールアドレス</label>
             <input type="email" id="email-input" placeholder="example@email.com" />
           </div>
 
@@ -122,7 +122,7 @@ function greeting(name: string) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="textarea">テキスト エリア</label>
+            <label htmlFor="textarea">テキストエリア</label>
             <textarea
               id="textarea"
               rows={4}
@@ -148,7 +148,7 @@ function greeting(name: string) {
           </div>
 
           <div className="form-group">
-            <label className="mb-2 block">ラジオ ボタン</label>
+            <label className="mb-2 block">ラジオボタン</label>
             <div className="space-y-2">
               <label className="flex items-center">
                 <input type="radio" name="radio-group" className="mr-2" />
@@ -181,7 +181,7 @@ function greeting(name: string) {
 
           <Card>
             <CardContent>
-              <h3 className="card-title">シンプル カード</h3>
+              <h3 className="card-title">シンプルカード</h3>
               <p>ヘッダーやフッターのないシンプルなカードです。</p>
             </CardContent>
           </Card>
@@ -282,7 +282,7 @@ function greeting(name: string) {
         </p>
         <p>
           新しいコンポーネントを作成する際は、まずこれらの基本スタイルを活用し、
-          必要に応じてカスタム スタイルを追加してください。
+          必要に応じてカスタムスタイルを追加してください。
         </p>
       </section>
     </div>

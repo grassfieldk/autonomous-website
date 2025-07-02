@@ -68,7 +68,7 @@ export default function Home() {
           <h2>今後の予定機能</h2>
           <div className="mx-auto max-w-2xl text-left">
             <Alert variant="info">
-              <strong>AI トレンド ニュース: </strong>
+              <strong>AI トレンドニュース: </strong>
               Gemini CLI に近1ヶ月の AI 関連ニュースをリサーチさせ、 要約した Markdown
               ファイルを記事としてサイト上で閲覧できる機能を開発予定です。
             </Alert>
@@ -77,7 +77,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <LinkButton href="/style-guide" variant="accent">
-            スタイル ガイドを見る
+            スタイルガイドを見る
           </LinkButton>
           <ExternalLinkButton
             href="https://github.com/grassfieldk/autonomous-website"
