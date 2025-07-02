@@ -44,8 +44,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f0f0f;
-    --foreground: #ededed;
+    --background: #333436;
+    --foreground: #f3f4f6;
     --primary: #26d0ce;
     --primary-hover: #22b5b3;
     --primary-light: #4dd8d6;
@@ -54,13 +54,13 @@
     --accent-hover: #d91a7a;
     --accent-light: #f356a0;
     --accent-dark: #c0166b;
-    --border: #333436;
-    --border-hover: #4a4b4e;
-    --muted: #1a1a1a;
-    --muted-foreground: #a1a1aa;
+    --border: #4a4d52;
+    --border-hover: #5a5d62;
+    --muted: #3f4247;
+    --muted-foreground: #9ca3af;
     --destructive: #f87171;
     --destructive-hover: #ef4444;
-    --gray: #333436;
+    --gray: #6b7280;
   }
 }
 
