@@ -1,6 +1,7 @@
-import { Alert, LinkButton, ExternalLinkButton } from "@/components";
+import { LinkButton, ExternalLinkButton } from "@/components";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TechBadgeList, TechBadgeItem } from "@/components/TechBadgeList";
+import { RoadmapSection, RoadmapItem } from "@/components/RoadmapSection";
 
 /**
  * Feature data for the homepage
@@ -30,12 +31,42 @@ const features = [
  * Technology stack data
  */
 const technologies: TechBadgeItem[] = [
-  { name: "Next.js", variant: "primary" },
-  { name: "TypeScript", variant: "primary" },
-  { name: "Tailwind CSS", variant: "accent" },
-  { name: "GitHub Copilot", variant: "accent" },
-  { name: "ESLint", variant: "secondary" },
-  { name: "Prettier", variant: "secondary" },
+  { name: "Next.js", variant: "primary", url: "https://nextjs.org" },
+  { name: "TypeScript", variant: "primary", url: "https://www.typescriptlang.org" },
+  { name: "Tailwind CSS", variant: "primary", url: "https://tailwindcss.com" },
+  {
+    name: "GitHub Copilot",
+    variant: "secondary",
+    url: "https://github.com/features/copilot",
+  },
+  { name: "ESLint", variant: "secondary", url: "https://eslint.org" },
+  { name: "Prettier", variant: "secondary", url: "https://prettier.io" },
+];
+
+/**
+ * Roadmap data
+ */
+const roadmapItems: RoadmapItem[] = [
+  {
+    title: "AI News Intelligence",
+    description:
+      "Gemini CLI による AI トレンドの自動収集・要約システム。\n最新の AI 情報を自動で整理し、サイト上で閲覧可能な記事として配信します。",
+    status: "planned",
+  },
+  {
+    title: "Component Library",
+    description:
+      "再利用可能な UI コンポーネントライブラリの構築。\n統一されたデザインシステムによる開発効率の向上を実現します。",
+    status: "completed",
+    updatedAt: "2025/07/01",
+  },
+  {
+    title: "Theme System",
+    description:
+      "ダークモード対応のテーマシステムの実装。\nユーザー体験の向上とアクセシビリティの改善を目指します。",
+    status: "completed",
+    updatedAt: "2025/07/01",
+  },
 ];
 
 /**
@@ -47,11 +78,10 @@ const technologies: TechBadgeItem[] = [
 export default function Home() {
   return (
     <div className="container py-12">
-      <main className="text-center">
-        <h1>Autonomous Website</h1>
-        <p className="text-muted-foreground mb-8 text-xl">
-          AI が制作から運用までのほとんどすべてを担当する自律型ウェブサイト
-        </p>
+      <main>
+        <h1 className="text-center">
+          Autonom<span className="text-primary">Lab.</span>
+        </h1>
 
         <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
@@ -64,18 +94,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mb-8 space-y-4">
-          <h2>今後の予定機能</h2>
-          <div className="mx-auto max-w-2xl text-left">
-            <Alert variant="info">
-              <strong>AI トレンドニュース: </strong>
-              Gemini CLI に近1ヶ月の AI 関連ニュースをリサーチさせ、 要約した Markdown
-              ファイルを記事としてサイト上で閲覧できる機能を開発予定です。
-            </Alert>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mb-24 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <LinkButton href="/theme-preview" variant="accent">
             テーマプレビューを見る
           </LinkButton>
@@ -86,6 +105,8 @@ export default function Home() {
             GitHub で見る
           </ExternalLinkButton>
         </div>
+
+        <RoadmapSection items={roadmapItems} className="mb-8" />
 
         <div className="mt-12 border-t pt-8">
           <TechBadgeList technologies={technologies} />

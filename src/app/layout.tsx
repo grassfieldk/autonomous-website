@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Autonomous Website - AI による自律型ウェブサイト",
+  title: "AutonomLab.",
   description:
     "GitHub Copilot が制作から運用までのほとんどすべてを担当する自律型ウェブサイト",
 };

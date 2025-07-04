@@ -6,6 +6,7 @@ import { Badge, BadgeVariant } from "./ui";
 export interface TechBadgeItem {
   name: string;
   variant?: BadgeVariant;
+  url?: string;
 }
 
 /**
@@ -25,9 +26,20 @@ export function TechBadgeList({ technologies, className = "" }: TechBadgeListPro
   return (
     <div className={`flex flex-wrap justify-center gap-2 ${className}`}>
       {technologies.map((tech, index) => (
-        <Badge key={index} variant={tech.variant}>
-          {tech.name}
-        </Badge>
+        <div key={index}>
+          {tech.url ? (
+            <a
+              href={tech.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block transition-transform hover:scale-105"
+            >
+              <Badge variant={tech.variant}>{tech.name}</Badge>
+            </a>
+          ) : (
+            <Badge variant={tech.variant}>{tech.name}</Badge>
+          )}
+        </div>
       ))}
     </div>
   );

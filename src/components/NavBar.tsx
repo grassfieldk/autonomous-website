@@ -15,7 +15,7 @@ export function NavBar() {
             href="/"
             className="text-foreground hover:text-primary text-xl font-bold transition-colors"
           >
-            Autonomous<span className="text-primary">Site</span>
+            Autonom<span className="text-primary">Lab.</span>
           </Link>
         </div>
 
